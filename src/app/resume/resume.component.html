@@ -1,0 +1,25 @@
+<div
+  *ngFor="let resumeEdu of resumeEdu"
+  style="background-color: yellow"
+  xmlns="http://www.w3.org/1999/html">
+  <h3>{{resumeEdu.campus}}</h3>
+  <p>{{resumeEdu.school}}</p>
+  <p>{{resumeEdu.concentration}}</p>
+  <p>{{resumeEdu.startYear}} - {{resumeEdu.endYear}}</p>
+  <p></p>
+</div>
+
+<div
+  *ngFor="let resumeWork of resumeWork"
+  style="background-color: lime"
+>
+  <h3>{{resumeWork.company}}</h3>
+  <p>{{resumeWork.position}}</p>
+  <p>{{resumeWork.start}} - {{resumeWork.end}}</p>
+  <ul>
+    <li *ngIf="resumeWork.role1">{{resumeWork.role1}}</li>
+    <li *ngIf="resumeWork.role2">{{resumeWork.role2}}</li>
+    <li *ngIf="resumeWork.role3">{{resumeWork.role3}}</li>
+    <li *ngIf="resumeWork.role4">{{resumeWork.role4}}</li>
+  </ul>
+</div>
